@@ -117,10 +117,17 @@
         float: right;
         padding-top: 1em;
       }
+      .loading {
+        display: flex;
+        justify-content: center;
+        font-size: 100px;
+        margin-top: 250px;
+      }
     </style>
   </head>
   <body>
-    <textarea id="source">
+    <div id="loading" class="loading">Loading...</div>
+    <textarea id="source" style="display: none;">
 name: inverse
 layout: true
 class: center, middle, inverse
@@ -253,6 +260,7 @@ layout: false
           highlightLanguage: 'remark',
           highlightLines: true
         }) ;
+      document.getElementById("loading").style.display = "none";
     </script>
     <!-- <script>
       var _gaq = _gaq || [];
