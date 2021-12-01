@@ -124,340 +124,122 @@ name: inverse
 layout: true
 class: center, middle, inverse
 ---
-#remark
-[ri-mahrk]
-.footnote[Go directly to [project site](https://github.com/gnab/remark)]
----
-## What is it and why should I be using it?
+# 人生路引
+## 第 3 章 豐盛應許，來自思維習慣
+.footnote[Hong, Jian-Ching]
+
 ---
 layout: false
-.left-column[
-  ## What is it?
-]
-.right-column[
-  A simple, in-browser, Markdown-driven slideshow tool targeted at people who know their way around HTML and CSS, featuring:
+# 目錄
 
-- Markdown formatting, with smart extensions
-
-- Presenter mode, with cloned slideshow view
-
-- Syntax highlighting, supporting a range of languages
-
-- Slide scaling, thus similar appearance on all devices / resolutions .red[*]
-
-- Touch support for smart phones and pads, i.e. swipe to navigate slides
-
-.footnote[.red[*] At least browsers try their best]
-]
----
-.left-column[
-  ## What is it?
-  ## Why use it?
-]
-.right-column[
-If your ideal slideshow creation workflow contains any of the following steps:
-
-- Just write what's on your mind
-
-- Do some basic styling
-
-- Easily collaborate with others
-
-- Share with and show to everyone
-
-Then remark might be perfect for your next.red[*] slideshow!
-
-.footnote[.red[*] You probably want to convert existing slideshows as well]
-]
----
-.left-column[
-  ## What is it?
-  ## Why use it?
-]
-.right-column[
-As the slideshow is expressed using Markdown, you may:
-
-- Focus on the content, expressing yourself in next to plain text not worrying what flashy graphics and disturbing effects to put where
-
-As the slideshow is actually an HTML document, you may:
-
-- Display it in any decent browser
-
-- Style it using regular CSS, just like any other HTML content
-
-- Use it offline!
-
-As the slideshow is contained in a plain file, you may:
-
-- Store it wherever you like; on your computer, hosted from your Dropbox, hosted on Github Pages alongside the stuff you're presenting...
-
-- Easily collaborate with others, keeping track of changes using your favourite SCM tool, like Git or Mercurial
-]
----
-template: inverse
-
-## How does it work, then?
----
-name: how
-
-.left-column[
-  ## How does it work?
-### - Markdown
-]
-.right-column[
-A Markdown-formatted chunk of text is transformed into individual slides by JavaScript running in the browser:
-
-```remark
-# Slide 1
-This is slide 1
+1. 給兒子的 18 堂商業思維課
+2. 心態致勝
+3. 為什麼他們擁有億萬財富 而你卻沒有
+4. 習慣致富
+5. 習慣致富 人生實踐版 - 加碼！
 
 ---
+## 給兒子的 18 堂商業思維課
 
-# Slide 2
-This is slide 2
-```
-
-.slides[
-  .first[
-  ### Slide 1
-  This is slide 1
-  ]
-  .second[
-  ### Slide 2
-  This is slide 2
-  ]
-]
-
-Regular Markdown rules apply with only a single exception:
-
-  - A line containing three dashes constitutes a new slide
-  (not a horizontal rule, `&lt;hr /&gt;`)
-
-Have a look at the [Markdown website](http://daringfireball.net/projects/markdown/) if you're not familiar with Markdown formatting.
-]
----
-.left-column[
-  ## How does it work?
-  ### - Markdown
-  ### - Inside HTML
-]
-.right-column[
-A simple HTML document is needed for hosting the styles, Markdown and the generated slides themselves:
-
-```xml
-<!DOCTYPE html>
-<html>
-  <head>
-    <style type="text/css">
-      /* Slideshow styles */
-    </style>
-  </head>
-  <body>
-*    <textarea id="source">
-      <!-- Slideshow Markdown -->
-    &lt;/textarea&gt;
-*    <script src="remark.js">
-    </script>
-    <script>
-*      var slideshow = remark.create();
-    </script>
-  </body>
-</html>
-```
-
-You may download remark to have your slideshow not depend on any online resources, or reference the [latest version](http://remarkjs.com/downloads/remark-latest.min.js) online directly.
-]
----
-template: inverse
-
-## Of course, Markdown can only go so far.
----
-.left-column[
-  ## Markdown extensions
-]
-.right-column[
-To help out with slide layout and formatting, a few Markdown extensions have been included:
-
-- Slide properties, for naming, styling and templating slides
-
-- Content classes, for styling specific content
-
-- Syntax highlighting, supporting a range of languages
-]
+- 先控制可控的部分，不可控的部分就隨綠
+  - 資源有限，專注在自己能掌握的部份，把效益最大化
+- 這世界是彩色，黑白與灰色三重空間所組成，不要有太多「非黑即白」的思想，即二分法思維
+  - 遇到選 A 或 B 的問題時，提醒自己有沒有第三種方法？
+- 在不完美下，做出盡可能好的決定
+  - Timeboxing
 
 ---
-.left-column[
-  ## Markdown extensions
-  ### - Slide properties
-]
-.right-column[
-Initial lines containing key-value pairs are extracted as slide properties:
+## 心態致勝
 
-```remark
-name: agenda
-class: middle, center
-
-# Agenda
-
-The name of this slide is {{ name }}.
-```
-
-Slide properties serve multiple purposes:
-
-* Naming and styling slides using properties `name` and `class`
-
-* Using slides as templates using properties `template` and `layout`
-
-* Expansion of `{{ property }}` expressions to property values
-
-See the [complete list](https://github.com/gnab/remark/wiki/Markdown#slide-properties) of slide properties.
-]
----
-.left-column[
-  ## Markdown extensions
-  ### - Slide properties
-  ### - Content classes
-]
-.right-column[
-Any occurences of one or more dotted CSS class names followed by square brackets are replaced with the contents of the brackets with the specified classes applied:
-
-```remark
-.footnote[.red.bold[*] Important footnote]
-```
-
-Resulting HTML extract:
-
-```xml
-<span class="footnote">
-  <span class="red bold">*</span> Important footnote
-</span>
-```
-]
----
-.left-column[
-  ## Markdown extensions
-  ### - Slide properties
-  ### - Content classes
-  ### - Syntax Highlighting
-]
-.right-column[
-Code blocks can be syntax highlighted by specifying a language from the set of [supported languages](https://github.com/gnab/remark/wiki/Configuration#highlighting).
-
-Using [GFM](http://github.github.com/github-flavored-markdown/) fenced code blocks you can easily specify highlighting language:
-
-.pull-left[
-
-<pre><code>```javascript
-function add(a, b)
-  return a + b
-end
-```</code></pre>
-]
-.pull-right[
-
-<pre><code>```ruby
-def add(a, b)
-  a + b
-end
-```</code></pre>
-]
-
-A number of highlighting [styles](https://github.com/gnab/remark/wiki/Configuration#highlighting) are available, including several well-known themes from different editors and IDEs.
-
-]
----
-.left-column[
-  ## Presenter mode
-]
-.right-column[
-To help out with giving presentations, a presenter mode comprising the
-following features is provided:
-
-- Display of slide notes for the current slide, to help you remember
-  key points
-
-- Display of upcoming slide, to let you know what's coming
-
-- Cloning of slideshow for viewing on extended display
-]
----
-.left-column[
-  ## Presenter mode
-  ### - Inline notes
-]
-.right-column[
-Just like three dashes separate slides,
-three question marks separate slide content from slide notes:
-
-```
-Slide 1 content
-
-*???
-
-Slide 1 notes
+- 固定型 vs 成長型 - 定型心態 (fixed mindset) vs 成長心態 (growth mindset)
+- 決定論 vs 目的論 - [[被討厭的勇氣]]
+- 外在歸因 vs 內在歸因 - [[歸因論]][[了凡四訓]]
+- 避免二分法思維：每個人或多或少都有固定型思維跟成長型思維；可能對 A 是定型心態，對 B 卻是成長心態
 
 ---
+## 為什麼他們擁有億萬財富 而你卻沒有
 
-Slide 2 content
+- 不被智商綁手腳
+  - 分析性
+  - 創造性
+  - 實踐性
+- 啟動心理防護罩
+  - 無視
+  - 把批評化為激勵
+- 找對池塘釣大魚
+  - 藍海
 
-*???
-
-Slide 2 notes
-```
-
-Slide notes are also treated as Markdown, and will be converted in the
-same manner slide content is.
-
-Pressing __P__ will toggle presenter mode.
-]
-???
-Congratulations, you just toggled presenter mode!
-
-Now press __P__ to toggle it back off.
 ---
-.left-column[
-  ## Presenter mode
-  ### - Inline notes
-  ### - Cloned view
-]
-.right-column[
-Presenter mode of course makes no sense to the audience.
+## 習慣致富 - 1
 
-Creating a cloned view of your slideshow lets you:
+心態 -> 行動 -> 結果
 
-- Move the cloned view to the extended display visible to the audience
+自註：心態可以從別人身上學到，行動只能靠自己
 
-- Put the original slideshow in presenter mode
+- 你必須努力工作，才能有錢到不必努力工作
+- 複利的力量需要時間才能發揮魔法
+- 金錢和成功是活在害怕的另一邊
 
-- Navigate as usual, and the cloned view will automatically keep up with the original
+目標的正確定義：
+- 一、實體活動
+- 二、百分之百可實現，表示你擁有執行所需實體活動的知識和技能
 
-Pressing __C__ will open a cloned view of the current slideshow in a new
-browser window.
-]
+設法和立志成功的人建立關係
+
+這些人的特質：
+快樂、樂觀、感思、熱情、心胸開放、終身學習
+
+自註：反過來說，讓自己成為這樣的人
+
 ---
-template: inverse
+## 習慣致富 - 2
 
-## It's time to get started!
+推拖延遲是恐懼和害怕造成的
+
+對生活的一切表示感恩
+
+創建[[成功日誌]]
+
+訓練別人如何對待我
+
+- 停止對一切說「好」
+- 不要只為了迎合別人而委屈自己
+- 不要猶豫不決，堅持你相信的事情
+
 ---
-.left-column[
-  ## Getting started
-]
-.right-column[
-Getting up and running is done in only a few steps:
+## 習慣致富 - 3
 
-1. Visit the [project site](http://github.com/gnab/remark)
+努力每天快樂
 
-2. Follow the steps in the Getting Started section
+- 一、管理期望
+- 二、練習樂觀 - 每日冥想、願景板、每日肯定、消除命令、為未來生活編寫腳本
+- 三、活在當下
+- 四、克服害怕
+- 五、當別人的導師
+- 六、擔任志工
+- 七、運動
+- 八、學習新事物
+- 九、冥想
+- 十、練習感恩
+- 十一、和其它快樂的人交往
+- 十二、笑
+- 十三、追求夢想和目標
+- 十四、做有創意的事
+- 十五、追求主要目的或喜歡的事物
 
-For more information on using remark, please check out the [wiki](https://github.com/gnab/remark/wiki) pages.
-]
 ---
-name: last-page
-template: inverse
+## 習慣致富 人生實踐版
 
-## That's all folks (for now)!
+好習慣 - 個人歸納
+- 健康 - 運動、飲食、充足睡眠
+- 成長 - 閱讀、自我改善
+- 嘗試 - 學習新知、新技能、新活動
+- 目標 - 設定夢想、人生目標，慢慢靠近
+- 正向 - 樂觀、冥想、感恩
+- 人際 - 跟相同價值觀的人來往
+- 財務 - 節儉，儲蓄，投資、設定預算並嚴格執行
+  - 少花錢、多存錢、投資差額 - [[賺錢-更賺自由的FIRE理財族]]
 
-Slideshow created using [remark](http://github.com/gnab/remark).
     </textarea>
     <script src="downloads/remark-latest.min.js"></script>
     <script>
