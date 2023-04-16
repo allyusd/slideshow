@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="keywords" content="remark,remarkjs,markdown,slideshow,presentation" />
+    <meta name="description" content="A simple, in-browser, markdown-driven slideshow tool." />
+    <title>2023-04-15 賺錢-更賺自由的FIRE理財族</title>
+    <style>
+      @import url(https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300&display=swap);
+      @import url(https://fonts.googleapis.com/css?family=Droid+Serif);
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      body {
+        font-family: 'Noto Sans TC', 'Droid Serif';
+      }
+      h1, h2, h3 {
+        font-family: 'Noto Sans TC', 'Yanone Kaffeesatz';
+        font-weight: 400;
+        margin-bottom: 0;
+      }
+      .remark-slide-content {
+        padding: 0.5em 2em;
+      }
+      .remark-slide-content h1 { font-size: 3em; }
+      .remark-slide-content h2 { font-size: 2em; }
+      .remark-slide-content h3 { font-size: 1.6em; }
+      .footnote {
+        position: absolute;
+        bottom: 12px;
+        left: 20px;
+      }
+      .ref {
+        font-size: 0.5em;
+        position: absolute;
+        bottom: 3em;
+      }
+      li p { line-height: 1.25em; }
+      .red { color: #fa0000; }
+      .large { font-size: 2em; }
+      a, a > code {
+        color: rgb(249, 38, 114);
+        text-decoration: none;
+      }
+      code {
+        background: #e7e8e2;
+        border-radius: 5px;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+      .remark-code-line-highlighted     { background-color: #373832; }
+      .pull-left {
+        float: left;
+        width: 47%;
+      }
+      .pull-right {
+        float: right;
+        width: 47%;
+      }
+      .pull-right ~ p {
+        clear: both;
+      }
+      #slideshow .slide .content code {
+        font-size: 0.8em;
+      }
+      #slideshow .slide .content pre code {
+        font-size: 0.9em;
+        padding: 15px;
+      }
+      .inverse {
+        background: #272822;
+        color: #777872;
+        text-shadow: 0 0 20px #333;
+      }
+      .inverse h1, .inverse h2 {
+        color: #f3f3f3;
+        line-height: 0.8em;
+      }
+
+      /* Slide-specific styling */
+      #slide-how .slides {
+        font-size: 0.9em;
+        position: absolute;
+        top:  151px;
+        right: 140px;
+      }
+      #slide-how .slides h3 {
+        margin-top: 0.2em;
+      }
+      #slide-how .slides .first, #slide-how .slides .second {
+        padding: 1px 20px;
+        height: 90px;
+        width: 120px;
+        -moz-box-shadow: 0 0 10px #777;
+        -webkit-box-shadow: 0 0 10px #777;
+        box-shadow: 0 0 10px #777;
+      }
+      #slide-how .slides .first {
+        background: #fff;
+        position: absolute;
+        top: 20%;
+        left: 20%;
+        z-index: 1;
+      }
+      #slide-how .slides .second {
+        position: relative;
+        background: #fff;
+        z-index: 0;
+      }
+
+      /* Two-column layout */
+      .left-column {
+        color: #777;
+        width: 20%;
+        height: 92%;
+        float: left;
+      }
+        .left-column h2:last-of-type, .left-column h3:last-child {
+          color: #000;
+        }
+      .right-column {
+        width: 75%;
+        float: right;
+        padding-top: 1em;
+      }
+      .loading {
+        display: flex;
+        justify-content: center;
+        font-size: 100px;
+        margin-top: 250px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="loading" class="loading">Loading...</div>
+    <textarea id="source" style="display: none;">
+name: inverse
+layout: true
+class: center, middle, inverse
+---
+# 賺錢-更賺自由的FIRE理財族
+### Playing with FIRE (Financial Independence Retire Early)
+.footnote[2023-04-15 - Hong, Jian-Ching]
+
+---
+layout: false
+## FIRE 運動
+
+#### 「FIRE」，也就是「財務自主，提早退休」(Financial Independence, Retire Early) 運動
+
+- 積極節省和低成本投資的人生，以求掌控自己的財務
+  - 買回自己最珍貴的資源，也就是時間。
+
+- 終極目標是要達到「FIRE」
+  - 這是一種擁有充足被動收入的狀態，不須工作即可支付生活開銷。
+
+---
+## 從賺愈多花愈多到由奢入儉換自由
+
+- FIRE使我們回歸鍾愛之事，而非只賺錢花錢
+
+- 通往自由之路，僅需盡量簡樸度日且減少開銷而已
+
+
+#### 自註
+
+- 大家都知道複利的力量，但他需要很長時間累積
+
+- 節約支出，是唯一可以對抗時間成本的方式
+
+---
+
+## 讓你快樂的十件事，其實可以不昂貴
+
+- FIRE 不是根深蒂固的極端方式，僅是用來努力追尋財務獨立的手段而已。
+
+- 要以怎麼樣的速度達成、沿途需要作出什麼抉擇，全由自己決定。
+
+---
+## FIRE 退休計算機
+
+<img src="images\2023-04-15-001.png" width="70%">
+
+[Retirement Calculator — Playing With FIRE](https://www.playingwithfire.co/retirementcalculator/)
+
+[官方計算機 中文使用說明](https://inews.hket.com/article/2667836)
+
+---
+## FIRE 退休計算機 - 試算表範例
+
+年存 50 萬，已存 5 年，2020 年開始，16 年後，2036 年達成
+
+<img src="images\2023-04-15-002.png" width="60%">
+
+注意：假設投資利率只有 1.4%，提領率 4%，所以開始提領後，資產會下降
+
+---
+
+### FIRE 退休計算機 - 假設討論
+
+- 假定 5% 投資報酬率，以及 4% 提領額
+
+如果你擔心風險，就要存下年度開銷的 34 倍，並且運用 3.25% 的「安全提領率」
+
+註：朋友試算的結果，應該用 2.5% - 3% 才比較保險
+
+- 其中一個範例說明中，平均年收入 60,000 美元，13 年達到財務獨立
+
+花了 50, 000 美元現金，購買一間需要修繕的房子，親手進行大部分的房屋裝修
+
+註：一年收入可以買房子，台灣不可能發生…
+
+---
+## 把省錢焦點放在關鍵開銷 - 大三元
+
+關鍵開銷，通常稱為「大三元」，也就是住房、交通和食物
+
+- 削減「享樂」開銷，網路購物、電子產品、服飾、小孩的玩具
+- 停止外食，在家吃早餐和晚餐，自備午餐去上班。
+  - 註：台灣自己煮有比較省嗎？單身自己煮有比較省嗎？
+- 檢視每月固定花費，像是網路、Netfile、電話費、健身房會員、小孩的游泳課
+- 消遺娛樂要維持免費或低成本方式
+  - 例如：在沙灘散步，在家看電影、與朋友「各出一菜」到家裡聚餐
+- 賣出家裡沒有在用或不需要的東西
+- 援尋較不昂貴的托育選項，如托嬰中心或「共享保姆」
+- 盡可能騎腳踏車前往各處
+- 減少度假次數，並利用信用卡回饋金來付這些錢
+- 一旦房子租約到期，找更便宜的地方居住
+
+我們要讓自己的價值觀符合花錢方式
+
+我們花了太多錢買不需要的東西，卻覺得被剝奪最想要的事情
+
+**我們的夢想人生是要免於負擔，不須為了開支發愁**
+
+---
+## 戒掉不尋常的消費，每分錢都花在刀口上
+
+該物實現的成果需要花掉你多少工作時間，才有辦法負擔得起？
+- 每件購物究竟值得你用多少人生時間換取？
+
+但所有這些奢侈品加總起來，代價卻是投入自己多年人生，只為了買東西發洩情緒
+
+不花錢享受體驗或購物，我們優先看重長期辛福快樂，而非短期享樂
+
+**把要買的東西/花費丟到前面的試算表，算一下因此晚幾年退休，然後想想值得嗎？**
+
+---
+## 簡單致富之路 正確投資以錢滾錢
+
+開支不能超過所得，且將餘額投資到指數基金
+
+VTSAX 是 FIRE 最愛的先鋒指數基金
+
+先鋒整體股市指數基金海軍上將股
+  - (Vanguard Total Stock Market Index Fund Admiral Shares, VTSAX)
+
+台灣投資 VTSAX，最低投資額為 3000 美元
+
+註：忘了是不是有聽到，後來禁止國外購買，替代的 ETF，且沒有投資額限制，VTI ETF
+
+只要不花掉投資額所賺的任何利息，反而把這些利息添加到原始投資額裡，即可達到複利
+
+暫時決定我們的投資組合：33% 是指數基金，33% 是不動產，33% 用於自己的創業
+
+FIRE 僅是一種方式，指導我們做出自己的決定和優先順且和以判斷
+  - 因而更能考慮周到，主宰自己的人生
+
+---
+## 失去彈性的極端節儉 不屬於 FIRE
+
+我們不但要聚焦於金錢，還要注重了解何事讓我們真正快樂，改善我們的長期福祉
+
+個人使命聲明
+- 你最重要的人生目標是什麼？
+- 如果僅剩六個月生命可活，你想做什麼事？
+- 接下來五年，你要怎麼花費時間？
+
+若有任何節儉行為對生活造成傷害和壓力，都不是稱職的 FIRE 原則
+
+---
+## 消費時，留意花錢心態
+
+夢幻房子其實反而有礙我自實現真正的夢想
+
+「無謂的奢侈品」與「帶來真正快樂的購買物」之間，有什麼樣的差別？
+
+只要消除大型壓力，小型壓力通常也之消散
+
+---
+## 財務自由，你有你的步調與路徑
+
+達成財務自主，才能真正釋放自我
+
+有了多餘的時間可用，花費生命在意義深遠的事務上
+  - 不論是要出唱片、學外語，或讓小孩在家自學都可以
+
+找出工作之外的生命意義，以及把錢用來當作工具，駕馭日常生活的意義
+
+---
+## 成為 FRIE 理財族的七步驟
+
+- 計算你有多少錢
+- 計算你的開支額與儲蓄額
+- 減少日常開銷
+- 縮減大三元 - 居家、交通、飲食
+- 要讓存款為你工作
+- 增加收入
+- 找到 FIRE 理財族
+
+---
+## 總結
+
+#### 1. 內容想提供給聽眾什麼價值?(新觀點,啟發,知識)
+關於 FIRE 運動的 What? Why? How?
+
+#### 2. 帶給聽眾最有價值的重點部分(最多三點)
+- 少花錢、多存錢、投資差額
+  - 將 50% 到 70% 的收入存下來，把這些存款投資於 VTI ETF
+
+- 追尋自己「真正想要」、「讓自己辛福」的事
+  - 用低成本讓自己一樣辛福，避開消費陷阱。
+  - 不要賺越多花越多(遮臉)，提早財務獨立取得自由。
+
+- 退休不一定不再工作，只是可以自由的選擇自己想做的事
+  - 探索自己想要的生活是什麼？
+
+    </textarea>
+    <script src="js/remark-latest.min.js"></script>
+    <script>
+      var hljs = remark.highlighter.engine;
+    </script>
+    <script src="js/remark.language.js"></script>
+    <script>
+      var slideshow = remark.create({
+          highlightStyle: 'monokai',
+          highlightLanguage: 'remark',
+          highlightLines: true
+        }) ;
+      document.getElementById("loading").style.display = "none";
+    </script>
+    <!-- <script>
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-44561333-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script');
+        ga.src = 'https://ssl.google-analytics.com/ga.js';
+        var s = document.scripts[0];
+        s.parentNode.insertBefore(ga, s);
+      }());
+    </script> -->
+  </body>
+</html>
