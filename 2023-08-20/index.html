@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="keywords" content="remark,remarkjs,markdown,slideshow,presentation" />
+    <meta name="description" content="A simple, in-browser, markdown-driven slideshow tool." />
+    <title>2023-08-20 出租預算規劃及Imb借貸平台</title>
+    <style>
+      @import url(https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300&display=swap);
+      @import url(https://fonts.googleapis.com/css?family=Droid+Serif);
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      body {
+        font-family: 'Noto Sans TC', 'Droid Serif';
+      }
+      h1, h2, h3 {
+        font-family: 'Noto Sans TC', 'Yanone Kaffeesatz';
+        font-weight: 400;
+        margin-bottom: 0;
+      }
+      .remark-slide-content {
+        padding: 0.5em 2em;
+      }
+      .remark-slide-content h1 { font-size: 3em; }
+      .remark-slide-content h2 { font-size: 2em; }
+      .remark-slide-content h3 { font-size: 1.6em; }
+      .footnote {
+        position: absolute;
+        bottom: 12px;
+        left: 20px;
+      }
+      .ref {
+        font-size: 0.5em;
+        position: absolute;
+        bottom: 3em;
+      }
+      li p { line-height: 1.25em; }
+      .red { color: #fa0000; }
+      .large { font-size: 2em; }
+      a, a > code {
+        color: rgb(249, 38, 114);
+        text-decoration: none;
+      }
+      code {
+        background: #e7e8e2;
+        border-radius: 5px;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+      .remark-code-line-highlighted     { background-color: #373832; }
+      .pull-left {
+        float: left;
+        width: 47%;
+      }
+      .pull-right {
+        float: right;
+        width: 47%;
+      }
+      .pull-right ~ p {
+        clear: both;
+      }
+      #slideshow .slide .content code {
+        font-size: 0.8em;
+      }
+      #slideshow .slide .content pre code {
+        font-size: 0.9em;
+        padding: 15px;
+      }
+      .inverse {
+        background: #272822;
+        color: #777872;
+        text-shadow: 0 0 20px #333;
+      }
+      .inverse h1, .inverse h2 {
+        color: #f3f3f3;
+        line-height: 0.8em;
+      }
+
+      /* Slide-specific styling */
+      #slide-how .slides {
+        font-size: 0.9em;
+        position: absolute;
+        top:  151px;
+        right: 140px;
+      }
+      #slide-how .slides h3 {
+        margin-top: 0.2em;
+      }
+      #slide-how .slides .first, #slide-how .slides .second {
+        padding: 1px 20px;
+        height: 90px;
+        width: 120px;
+        -moz-box-shadow: 0 0 10px #777;
+        -webkit-box-shadow: 0 0 10px #777;
+        box-shadow: 0 0 10px #777;
+      }
+      #slide-how .slides .first {
+        background: #fff;
+        position: absolute;
+        top: 20%;
+        left: 20%;
+        z-index: 1;
+      }
+      #slide-how .slides .second {
+        position: relative;
+        background: #fff;
+        z-index: 0;
+      }
+
+      /* Two-column layout */
+      .left-column {
+        color: #777;
+        width: 20%;
+        height: 92%;
+        float: left;
+      }
+        .left-column h2:last-of-type, .left-column h3:last-child {
+          color: #000;
+        }
+      .right-column {
+        width: 75%;
+        float: right;
+        padding-top: 1em;
+      }
+      .loading {
+        display: flex;
+        justify-content: center;
+        font-size: 100px;
+        margin-top: 250px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="loading" class="loading">Loading...</div>
+    <textarea id="source" style="display: none;">
+name: inverse
+layout: true
+class: center, middle, inverse
+---
+# 出租預算規劃及Imb借貸平台
+.footnote[2023-08-20 - Hong, Jian-Ching]
+
+---
+layout: false
+## 大綱
+
+- 租金收入評估
+- 出租費用
+- 永續經營
+- Imb借貸平台
+
+---
+## 租金收入評估 - 1
+
+租屋網查詢
+
+<img src="images\001.png" width="100%">
+
+- 尋找條件相同的
+- 忽略極端值
+- 看到的不一定是真的
+
+.ref[圖片來源：[房屋出租 - 591租屋網](https://rent.591.com.tw)]
+---
+
+## 租金收入評估 - 2
+
+猜猜看
+
+<img src="images\002.jpg" width="50%">
+
+- 基準價格往上拉進入市場試水溫
+- 不要太在意是否太便宜，應該先看房客素質
+- 從房客打聽他們在意的地方
+
+.ref[圖片來源：[免費圖庫相片](https://www.pexels.com/zh-tw/photo/1111597/)]
+---
+## 出租費用 - 常態
+
+<img src="images\004.jpg" width="50%">
+
+- 管理費
+- 水、電、清潔
+- 網路費、第四台
+- 仲介、代管
+
+.ref[圖片來源：[免費圖庫相片](https://www.pexels.com/zh-tw/photo/4386366/)]
+---
+## 出租費用 - 房屋稅、地價稅
+
+<img src="images\003.jpg" width="50%">
+
+- 房屋稅、地價稅
+  - 囤房稅
+  - 名字叫囤房，不代表沒有多房就不會漲稅
+
+.ref[圖片來源：[免費圖庫相片](https://www.pexels.com/zh-tw/photo/1029599/)]
+---
+
+## 出租費用 - 所得稅
+
+很多人最怕的一點
+
+<img src="images\003.jpg" width="50%">
+
+- 租金合併到所得稅 => 所得越高的人，稅金越重
+- 租金申請所得稅時，可以直接扣除 43% 費用，以 57% 租金為租金所得
+
+例：年租金 10,000，扣除 43% 費用，租金所得 5,700，假如所得級距是 12%，稅金 684。
+
+.ref[圖片來源：[免費圖庫相片](https://www.pexels.com/zh-tw/photo/6863183/)]
+---
+## 永續經營
+
+記得計算維修費用
+
+- 借用會計「費用資本化」、「折舊」、「攤提」等概念
+- 將所有的「家具」、「家電」等設備，依使用年限進行攤提
+  - 嚴格一點可以用保固年限來計算 (尤其是消費型家電，像是電視這種過保就會壞掉)
+
+<img src="images\006.png" width="50%">
+
+---
+## Imb借貸平台 - 優勢
+
+- 銀行的利率太低 1~3%
+- 投資的風險太高
+
+**借貸平台提供 9~12% 高利息方案**
+
+- 個人借貸風險過高
+  - 小額多標的，分散風險
+  - 不動產抵押 (Imb 主打特色)
+
+設定不動產抵押，就跟銀行辦理房貸一樣，不還錢可以申請法拍，不至於血本無歸
+
+<img src="images\007.webp" width="50%">
+
+.ref[圖片來源：im.B官方網站]
+---
+## Imb借貸平台 - 問題
+
+整體的設計非常好，唯一的問題是
+
+**我不是原始債權人，所以抵押權不在我身上**
+
+- 所以不動產的「保障」根本不是我
+- 是否真實了解不動產物件的狀況
+  - 第一順位抵押金額多少
+  - 房況如何？市價如何？
+
+---
+## Imb借貸平台 - 結果
+
+如果當原始債權人，單純是我跟借款人的借貸行為，平台單純媒介。
+
+但是平台設計了「分散債權」的制度，當了債權購買人，
+
+理論上是跟原始債權人拿到了債權，但是其實沒有任何保證，
+
+只靠平台的運作機制，也就是你對平台的信任。
+
+而最後的爆點是 **虛假債權**
+
+也就是根本沒有人要借錢，沒有不動產，就連原始債權人也是假的……
+    </textarea>
+    <script src="js/remark-latest.min.js"></script>
+    <script>
+      var hljs = remark.highlighter.engine;
+    </script>
+    <script src="js/remark.language.js"></script>
+    <script>
+      var slideshow = remark.create({
+          highlightStyle: 'monokai',
+          highlightLanguage: 'remark',
+          highlightLines: true
+        }) ;
+      document.getElementById("loading").style.display = "none";
+    </script>
+    <!-- <script>
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-44561333-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script');
+        ga.src = 'https://ssl.google-analytics.com/ga.js';
+        var s = document.scripts[0];
+        s.parentNode.insertBefore(ga, s);
+      }());
+    </script> -->
+  </body>
+</html>
